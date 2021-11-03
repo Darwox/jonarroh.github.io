@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<link rel="icon" href="piano2.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<title>mini-piano</title>
+	</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<body ondragstart="return false" onselectstart="return false">
+		<!-- ---------------------------contenedor del backgrond----------------------------- -->
+		<div class="container">
+			<!-- ---------------------------contenedor del dibujo----------------------------- -->
+			<div class="cont">
+				<!-- -------------------piano----------------------------- -->
+				<div class="keyword">
+					<!-- --------lineas-------- -->
+					<div class="linea1"></div>
+					<div class="linea2"></div>
+					<div class="linea3"></div>
+					<div class="circle"></div>
+
+					<!-- ----texto--- -->
+					<span class="marca">YAMAHA</span>
+					<!-- --------contenedor de teclas------ -->
+					<div class="keys"></div>
+					<ul class="negra">
+						<li class="keyb1" onclick="black1()"></li>
+						<li class="keyb2" onclick="black2()"></li>
+						<li class="keyb3"></li>
+						<li class="keyb4" onclick="black3()"></li>
+						<li class="keyb5" onclick="black4()"></li>
+						<li class="keyb6" onclick="black5()"></li>
+					</ul>
+					<ul class="teclado">
+						<li class="key1" onclick="key1()" id="key1">
+							<br /><br /><br /><br /><br /><br /><span>DO</span>
+						</li>
+						<li class="key2" onclick="key2()" id="key2">
+							<br /><br /><br /><br /><br /><br /><span>RE</span>
+						</li>
+						<li class="key3" onclick="key3()" id="key3">
+							<br /><br /><br /><br /><br /><br /><span>MI</span>
+						</li>
+						<li class="key4" onclick="key4()" id="key4">
+							<br /><br /><br /><br /><br /><br /><span>FA</span>
+						</li>
+						<li class="key5" onclick="key5()" id="key5">
+							<br /><br /><br /><br /><br /><br /><span>SOL</span>
+						</li>
+						<li class="key6" onclick="key6()" id="key6">
+							<br /><br /><br /><br /><br /><br /><span>LA</span>
+						</li>
+						<li class="key7" onclick="key7()" id="key7">
+							<br /><br /><br /><br /><br /><br /><span>SI</span>
+						</li>
+
+						<!-- ---------comprtamiento--------------- -->
+						<script src="../js/main.js"></script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<audio preload="auto">
+			<source src="C.wav" />
+		</audio>
+		<audio preload>
+			<source src="D.wav" />
+		</audio>
+		<audio preload>
+			<source src="E.wav" />
+		</audio>
+		<audio preload>
+			<source src="F.wav" />
+		</audio>
+		<audio preload>
+			<source src="G.wav" />
+		</audio>
+		<audio preload>
+			<source src="A.wav" />
+		</audio>
+		<audio preload>
+			<source src="B.wav" />
+		</audio>
+		<audio preload>
+			<source src="C_Drum.wav" />
+		</audio>
+		<audio preload>
+			<source src="D_Drum.wav" />
+		</audio>
+		<audio preload>
+			<source src="F_Drum.wav" />
+		</audio>
+		<audio preload>
+			<source src="G_Drum.wav" />
+		</audio>
+		<audio preload>
+			<source src="B_Drum.wav" />
+		</audio>
+	</body>
+</html>

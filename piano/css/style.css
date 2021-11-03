@@ -1,0 +1,245 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	background: rgb(63, 190, 251);
+	background: radial-gradient(
+		circle,
+		rgba(63, 190, 251, 1) 0%,
+		rgba(152, 70, 252, 1) 92%
+	);
+	height: 100vh;
+	display: grid;
+	place-content: center;
+	width: 100%;
+}
+
+.keyword {
+	width: 600px;
+	height: 200px;
+	background-color: rgb(29, 28, 28);
+	border-radius: 0 0 30px 30px;
+	border: 5px solid white;
+}
+
+.keyword .keys {
+	position: relative;
+
+	left: 160px;
+	width: 400px;
+	height: 150px;
+}
+.marca {
+	position: relative;
+	font-weight: bolder;
+	float: right;
+	top: -80px;
+	right: 15px;
+	color: white;
+	text-transform: uppercase;
+	outline-width: 2px;
+	font-family: 'Roboto', sans-serif;
+}
+span {
+	position: relative;
+	outline-width: 2px;
+	font-weight: bolder;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+.linea1,
+.linea2,
+.linea3 {
+	position: relative;
+	width: 60px;
+	height: 10px;
+	top: 15px;
+	left: 40px;
+	margin-bottom: 2px;
+	background-color: black;
+	z-index: 2;
+}
+.circle {
+	position: relative;
+	top: 50px;
+	left: 45px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: white;
+}
+.circle::after {
+	content: '';
+	position: relative;
+	top: -5px;
+	display: block;
+	left: 5px;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background-color: black;
+}
+.circle::before {
+	content: '';
+	position: relative;
+	top: -1px;
+	display: block;
+	left: 22px;
+	height: 10px;
+	width: 5px;
+
+	background-color: black;
+}
+.teclado {
+	display: inline-block;
+}
+
+.key1,
+.key2,
+.key3,
+.key4,
+.key5,
+.key6,
+.key7 {
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	width: 57.14px;
+	float: left;
+	height: 150px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 0 0 10px 10px;
+	list-style: none;
+	top: -260px;
+	left: 160px;
+	box-shadow: 0px 5px 0px 0px rgba(72, 69, 69, 0.75);
+
+	cursor: pointer;
+}
+
+.keyb1:hover,
+.keyb2:hover,
+.keyb3:hover,
+.keyb4:hover,
+.keyb5:hover,
+.keyb6:hover,
+.keyb7:hover {
+	animation-name: tecla;
+	animation-duration: 500ms;
+}
+@keyframes tecla {
+	0% {
+		background-color: black;
+	}
+	50% {
+		background-color: gray;
+	}
+	100% {
+		background-color: black;
+	}
+}
+.key1:hover,
+.key2:hover,
+.key3:hover,
+.key4:hover,
+.key5:hover,
+.key6:hover,
+.key7:hover {
+	animation-name: teclas;
+	animation-duration: 500ms;
+}
+@keyframes teclas {
+	0% {
+		background-color: white;
+	}
+	50% {
+		background-color: gray;
+	}
+	100% {
+		background-color: white;
+	}
+}
+
+.keyb1,
+.keyb2,
+.keyb3,
+.keyb4,
+.keyb5,
+.keyb6 {
+	text-align: center;
+	position: relative;
+	z-index: 7;
+	width: 25px;
+	margin-right: 32px;
+	float: left;
+	height: 50px;
+	background-color: black;
+	border: 2px solid white;
+	border-radius: 0 0 10px 10px;
+	list-style: none;
+	top: -209px;
+	left: 205px;
+	box-shadow: 0px 5px 0px 0px rgba(189, 182, 182, 0.75);
+
+	cursor: pointer;
+}
+
+.keyb3 {
+	visibility: hidden;
+}
+@media screen and (max-width: 600px) {
+	.container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+	}
+	.keyword {
+		position: fixed;
+		top: 160px;
+		right: 0%;
+		width: 500px;
+		transform: rotate(90deg);
+	}
+
+	.key1,
+	.key2,
+	.key3,
+	.key4,
+	.key5,
+	.key6,
+	.key7 {
+		left: 140px;
+		width: 47.14px;
+	}
+	.keyb1,
+	.keyb2,
+	.keyb3,
+	.keyb4,
+	.keyb5,
+	.keyb6 {
+		width: 25px;
+
+		top: -209px;
+		left: 172px;
+		margin-left: -7px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.keyword {
+		right: -15%;
+	}
+}
+@media screen and (max-width: 350px) {
+	.keyword {
+		right: -35%;
+	}
+}
